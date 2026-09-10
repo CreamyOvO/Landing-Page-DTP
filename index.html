@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="sticky bg-slate-800 text-white top-0 r-50">
+        <nav class="max-w-6xl flex items-center justify-between px-6 py-4">
+            <span>Logo</span>
+            <div class="hidden md:flex gap-4">
+                <a href="#" class="hover:text-slate-400">Home</a>
+                <a href="#" class="hover:text-slate-400">About</a>
+                <a href="#" class="hover:text-slate-400">Contact</a>
+            </div>
+            <button id="menuBtn" class="bg-slate-900 md:hidden text-white" aria-label="buka menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M4 8H28M4 16H28M4 24H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div id="Mobilemenu "class="hidden md:flex gap-4 text-white border-t border-slate-800 px-6 py-6 flex-col gap-4 text-slate-300">
+                <a href="#" class="hover:text-slate-400">Home</a>
+                <a href="#" class="hover:text-slate-400">About</a>
+                <a href="#" class="hover:text-slate-400">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="flex flex-col items-center justify-center text-center py-24 px-6">
+        <h1 class="text- font-bold">Judul Utama</h1>
+        <p>Sub Judul Singkat...</p>
+        <button>Nilai Sekarang</button>
+    </section>
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 p-8">
+        <div class="rounded-lg shadow p-24 bg-black text-white border border-solid border-white text-center">
+            Fitur 1
+        </div>
+        <div class="rounded-sm shadow p-24 border border-solid border-black text-center">
+            Fitur 2
+        </div>
+        <div class="rounded-lg p-24 shadow bg-black text-white border border-solid border-white text-center">
+            Fitur 3
+        </div>
+    </section>
+    <form class="flex flex-col gap-4 p-6">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="border rounded p-2">
+        <button type="submit" class="p-2 rounded bg-teal-600 border text-white">Kirim</button>
+    </form>
+    <footer class="flex justify-between item-center p-4">
+        <p>Copyright by Creamywho?</p>
+        <div class="flex gap-3">
+            <a href="">IG</a>
+            <a href="">Github</a>
+        </div>
+    </footer>
+</body>
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const Mobilemenu = document.getElementById("Mobilemenu");
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = !Mobilemenu.classList.contains("hidden");
+        Mobilemenu.classList.toggle("hidden", isOpen);
+        Mobilemenu.classList.toggle("flex", !isOpen);
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+        menuBtn.setAttribute("aria-label", isOpen ? "buka menu" : "tutup menu")
+    })
+
+    Mobilemenu.querySelectorAll("a").forEach[(link) => {
+        link.addEventListener('click', () => {
+            Mobilemenu.classList.add("hidden");
+            Mobilemenu.classList.remove("flex");
+            menuBtn.setAttribute("aria-expanded", 'false');
+            menuBtn.setAttribute("aria-label", "Buka menu");
+        });
+    }]
+</script>
+</html>
