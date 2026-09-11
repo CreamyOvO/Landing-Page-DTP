@@ -3,79 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
+    <title>Tangga Perkasa</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body>
-    <header class="sticky bg-slate-800 text-white top-0 r-50">
-        <nav class="max-w-6xl flex items-center justify-between px-6 py-4">
-            <span>Logo</span>
-            <div class="hidden md:flex gap-4">
-                <a href="#" class="hover:text-slate-400">Home</a>
-                <a href="#" class="hover:text-slate-400">About</a>
-                <a href="#" class="hover:text-slate-400">Contact</a>
+    <header class="sticky top-0 z-50 bg-slate-900 text-white">
+        <nav class="flex flex-row items-center justify-between pt-5 pb-5 pl-50 pr-50">
+            <div id="logo" class="flex flex-row items-center gap-2">
+                <img src="logo.png" alt="" width="40px">
+                <h1 class="font-bold text-lg">Tangga Perkasa</h1>
             </div>
-            <button id="menuBtn" class="bg-slate-900 md:hidden text-white" aria-label="buka menu" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M4 8H28M4 16H28M4 24H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <div id="Mobilemenu "class="hidden md:flex gap-4 text-white border-t border-slate-800 px-6 py-6 flex-col gap-4 text-slate-300">
-                <a href="#" class="hover:text-slate-400">Home</a>
-                <a href="#" class="hover:text-slate-400">About</a>
-                <a href="#" class="hover:text-slate-400">Contact</a>
+            <div id="navbar" class="flex flex-row gap-6 font-semibold text-white/90 text-sm">
+                <a href="#produk">Produk</a>
+                <a href="#keunggulan">Keunggulan</a>
+                <a href="#testimoni">Testimoni</a>
+                <a href="#pesan">Pesan</a>
             </div>
+            <a href="" class="flex flex-row bg-green-500 pt-2 pb-2 pl-4 pr-4 gap-2 rounded-full">
+                <img src="wa.png" alt="" width="21px" height="5px">
+                Chat Sekarang
+            </a>
         </nav>
     </header>
-
-    <section class="flex flex-col items-center justify-center text-center py-24 px-6">
-        <h1 class="text- font-bold">Judul Utama</h1>
-        <p>Sub Judul Singkat...</p>
-        <button>Nilai Sekarang</button>
+    <section class="flex flex-row pl-50 pr-50 bg-slate-900 h-140 pt-20 gap-50">
+        <div id="informasi" class="flex flex-col max-w-lg gap-6">
+            <p class="bg-orange-500/20 text-orange-300 rounded-full p-4 pb-1 pt-1 max-w-71 font-semibold text-xs text-center">Distributor Resmi Tangga Aluminium</p>
+            <h1 class="text-white text-5xl font-bold">Tangga Kokoh untuk Rumah, Toko, dan Proyek Anda</h1>
+            <p class="text-white/80 text-lg">Material aluminium premium, anti-karat, dan teruji stabil di berbagai medan. Konsultasi gratis, pengiriman ke seluruh Indonesia.</p>
+            <div id="tombol1" class="flex flex-row gap-4">
+                <a href="#" class="text-white bg-orange-500 rounded-lg p-6 pt-3 pb-3 font-semibold">Lihat Produk</a>
+                <a href="#" class="text-white border-2 border-white/50 rounded-lg p-6 pt-3 pb-3">Konsultasi Via WhatsApp</a>
+            </div>
+        </div>
+        <div id="tangga" class="relative h-56 w-80 translate-x-1 scale-75">
+            <div class="absolute inset-y-0 left-4 w-3 h-100 bg-slate-600 rounded"></div>
+            <div class="absolute inset-y-0 left-1/2 translate-x-1/2 w-3 h-100 bg-orange-500 rounded"></div>
+            <div class="absolute inset-y-0 right-4 w-3 h-100 bg-slate-600 rounded"></div>
+            <div class="absolute left-2 right-2 h-3 bg-slate-500 rounded top-10"></div>
+            <div class="absolute left-2 right-2 h-3 bg-slate-500 rounded top-30"></div>
+            <div class="absolute left-2 right-2 h-3 bg-slate-500 rounded top-50"></div>
+            <div class="absolute left-2 right-2 h-3 bg-slate-500 rounded top-70"></div>
+            <div class="absolute left-2 right-2 h-3 bg-slate-500 rounded top-90"></div>
+        </div>
     </section>
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-5 p-8">
-        <div class="rounded-lg shadow p-24 bg-black text-white border border-solid border-white text-center">
-            Fitur 1
+    <section id="problem" class="flex flex-col pl-50 pr-50 text-center pt-20 pb-20 bg-slate-100">
+        <div id="pembuka1">
+            <h2 class="text-3xl font-bold">Masalah Yang Sering Dialami</h2>
+            <p class="text-black/80 font-reguler mt-3">Sebelum menentukan tangga yang tepat, banyak pelanggan datang dengan <br>salah satu kekhawatiran ini.</p>
         </div>
-        <div class="rounded-sm shadow p-24 border border-solid border-black text-center">
-            Fitur 2
-        </div>
-        <div class="rounded-lg p-24 shadow bg-black text-white border border-solid border-white text-center">
-            Fitur 3
+        <div id="card1" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div class="kartum border border-slate-200 rounded-xl p-6 text-left bg-white">
+                <div class="icon h-10 w-10 rounded-lg bg-orange-100 text-orange-600 flex justify-center items-center mb-5">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg">Ragu Soal Keamanan</h3>
+                <p class="text-slate-700 text-sm mt-3">Tangga goyang atau licin saat dipakai di ketinggian membuat pekerjaan jadi berisiko.</p>
+            </div>
+            <div class="kartum border border-slate-200 rounded-xl p-6 text-left bg-white">
+                <div class="icon h-10 w-10 rounded-lg bg-orange-100 text-orange-600 flex justify-center items-center mb-5">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.7 2.7L3 8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 3v5h5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg">Cepat rusak & berkarat</h3>
+                <p class="text-slate-700 text-sm mt-3">Material murahan gampang penyok dan berkarat, jadi harus ganti dalam waktu singkat.</p>
+            </div>
+            <div class="kartum border border-slate-200 rounded-xl p-6 text-left bg-white">
+                <div class="icon h-10 w-10 rounded-lg bg-orange-100 text-orange-600 flex justify-center items-center mb-5">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l4 4v6h-2M3 7v10h2M16 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <h3 class="font-semibold text-lg">Butuh cepat, susah dapat</h3>
+                <p class="text-slate-700 text-sm mt-3">Kebutuhan mendadak untuk proyek atau rumah, tapi supplier lama merespons.</p>
+            </div>
         </div>
     </section>
-    <form class="flex flex-col gap-4 p-6">
-        <label for="email">Email</label>
-        <input id="email" type="email" class="border rounded p-2">
-        <button type="submit" class="p-2 rounded bg-teal-600 border text-white">Kirim</button>
-    </form>
-    <footer class="flex justify-between item-center p-4">
-        <p>Copyright by Creamywho?</p>
-        <div class="flex gap-3">
-            <a href="">IG</a>
-            <a href="">Github</a>
+    <section id="produk" class="pl-50 pr-50 mb-20">
+        <div id="pembuka2" class="text-center pt-20">
+            <h3 class="text-3xl font-bold">Produk Unggulan</h3>
+            <p class="text-black/80 font-reguler mt-3">Pilih sesuai kebutuhan — rumah tangga, mobilitas, atau industri.</p>
+        </div>
+        <div id="card2" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div class="kartup rounded-xl border border-slate-200 overflow-hidden flex flex-col">
+                <div id="fotop" class="flex items-center justify-center text-center h-40 bg-slate-100">
+                    <p>Foto Produk</p>
+                </div>
+                <div id="informasi" class="flex flex-col p-6">
+                    <h4 class="text-md font-semibold">Tangga Lipat Aluminium</h4>
+                    <ul class="text-sm mt-2 text-slate-600">
+                        <li>• Tinggi 2–5 anak tangga</li>
+                        <li>• Ringan & mudah disimpan</li>
+                        <li>• Karet anti-slip di kaki</li>
+                    </ul>
+                    <p class="text-orange-600 font-bold mt-3 text-md">Mulai Rp 450.000</p>
+                    <a href="#" class="rounded-xl bg-slate-900 p-2 text-white text-center font-semibold text-sm mt-3">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="kartup rounded-xl border border-slate-200 overflow-hidden flex flex-col">
+                <div id="fotop" class="flex items-center justify-center text-center h-40 bg-slate-100">
+                    <p>Foto Produk</p>
+                </div>
+                <div id="informasi" class="flex flex-col p-6">
+                    <h4 class="text-md font-semibold">Tangga Teleskopik</h4>
+                    <ul class="text-sm mt-2 text-slate-600">
+                        <li>• Panjang hingga 4.4 meter</li>
+                        <li>• Bisa dilipat ringkas</li>
+                        <li>• Cocok dibawa ke lokasi proyek</li>
+                    </ul>
+                    <p class="text-orange-600 font-bold mt-3 text-md">Mulai Rp 1.250.000</p>
+                    <a href="#" class="rounded-xl bg-slate-900 p-2 text-white text-center font-semibold text-sm mt-3">Pesan Sekarang</a>
+                </div>
+            </div>
+            <div class="kartup rounded-xl border border-slate-200 overflow-hidden flex flex-col">
+                <div id="fotop" class="flex items-center justify-center text-center h-40 bg-slate-100">
+                    <p>Foto Produk</p>
+                </div>
+                <div id="informasi" class="flex flex-col p-6">
+                    <h4 class="text-md font-semibold">Tangga Dorong (Rolling Ladder)</h4>
+                    <ul class="text-sm mt-2 text-slate-600">
+                        <li>• Roda untuk mobilitas gudang/toko</li>
+                        <li>• Rangka aluminium kokoh</li>
+                        <li>• Pegangan ergonomis</li>
+                    </ul>
+                    <p class="text-orange-600 font-bold mt-3 text-md">Mulai Rp 2.100.000</p>
+                    <a href="#" class="rounded-xl bg-slate-900 p-2 text-white text-center font-semibold text-sm mt-3">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="keunggulan" class="bg-slate-100 pt-20 pl-50 pr-50 pb-20">
+        <h3 class="text-3xl font-bold text-center">Kenapa Pilih Tangga Perkasa</h3>
+        <div id="benefit" class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 text-center">
+            <div class="benet flex flex-col items-center gap-4">
+                <div class="icon2 bg-green-200 text-green-600 h-12 w-12 justify-center items-center flex rounded-full">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c6-2 8-6 8-11V5l-8-3-8 3v6c0 5 2 9 8 11Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <p class="font-semibold text-sm">Bergaransi Resmi</p>
+            </div>
+            <div class="benet flex flex-col items-center gap-4">
+                <div class="icon2 bg-green-200 text-green-600 h-12 w-12 justify-center items-center flex rounded-full">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l4 4v6h-2M3 7v10h2M16 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <p class="font-semibold text-sm">Kirim Seluruh Indonesia</p>
+            </div>
+            <div class="benet flex flex-col items-center gap-4">
+                <div class="icon2 bg-green-200 text-green-600 h-12 w-12 justify-center items-center flex rounded-full">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <p class="font-semibold text-sm">Material Aluminium Premium</p>
+            </div>
+            <div class="benet flex flex-col items-center gap-4">
+                <div class="icon2 bg-green-200 text-green-600 h-12 w-12 justify-center items-center flex rounded-full">
+                    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <p class="font-semibold text-sm">Konsultasi Gratis</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimoni" class="flex flex-col pt-20 bg-slate-200 pl-50 pr-50 pb-20">
+        <h3 class="text-3xl font-bold text-center">Kata Pelanggan Kami</h3>
+        <div id="card3" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+            <div class="testi bg-white p-6 rounded-lg text-sm border border-slate-300">
+                <p>"Tangga teleskopiknya ringkas banget buat dibawa ke lokasi proyek, kokoh juga waktu dipakai."</p>
+                <p class="mt-4 font-semibold text-sm">— Pak Dedi, Kontraktor</p>
+            </div>
+            <div class="testi bg-white p-6 rounded-lg text-sm border-slate-300">
+                <p>"Respon cepat waktu tanya-tanya di WhatsApp, barang sampai sesuai jadwal."</p>
+                <p class="mt-4 font-semibold text-sm">— Ibu Sri, Pemilik Toko</p>
+            </div>
+            <div class="testi bg-white p-6 rounded-lg text-sm border-slate-300">
+                <p>"Tangga dorongnya sangat membantu operasional gudang kami sehari-hari."</p>
+                <p class="mt-4 font-semibold text-sm">— Pak Andra, Supervisor Gudang</p>
+            </div>
+        </div>
+    </section>
+    <section id="pesan" class="flex flex-col bg-slate-100 mx-auto py-20 px-100">
+        <h3 class="text-3xl font-bold text-center pt-20">Form Pemesanan</h3>
+        <p class="text-md text-center text-slate-500 mt-3">Isi form di bawah — setelah dikirim, pesanan akan terbuka otomatis di WhatsApp.</p>
+        <form class="flex flex-col bg-white border border-slate-300 rounded-xl p-6 mt-10">
+            <label for="nama" class="font-semibold text-sm mt-5">Nama Lengkap</label>
+            <input type="text" class="border border-slate-300 rounded-lg p-3 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <label for="nomer" class="font-semibold text-sm mt-5">Nomer WhatsApp</label>
+            <input type="text" class="border border-slate-300 rounded-lg p-3 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <label for="produk" class="font-semibold text-sm mt-5">Produk yang Diminati</label>
+            <select name="produk" id="produk" class="border border-slate-300 rounded-lg p-3 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-orange-300">
+                <option value="" >-- Pilih Produk --</option>
+                <option value="tangga-lipat">Tangga Lipat Aluminium</option>
+                <option value="tangga-dorong">Tangga Dorong</option>
+                <option value="tangga-teleskopik">Tangga Teleskopik</option>
+                <option value="idk">Belum tau, mau konsultasi dulu</option>
+            </select>
+            <label for="jumlah" class="font-semibold text-sm mt-5">Jumlah</label>
+            <input type="number" class="border border-slate-300 rounded-lg p-3 text-sm mt-2 focus:outline-none focus:ring-2 focus:ring-orange-300">
+            <label for="catatan" class="font-semibold text-sm mt-5">Catatan (opsional)</label>
+            <textarea name="note" id="note" cols="3" class="mt-2 border border-slate-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-orange-300"></textarea>
+            <button class="bg-green-400 flex flex-row items-center justify-center p-3 gap-2 text-white font-semibold text-sm rounded-lg mt-5">
+                <img src="wa.png" alt="">
+                Kirim Pesanan Via WhatsApp
+            </button>
+        </form>
+    </section>
+    <footer class="flex flex-row bg-slate-900 px-50 py-10 text-slate-400 justify-between text-sm">
+        <p>© 2026 Tangga Perkasa. Semua hak dilindungi.</p>
+        <div id="sosmed2" class="flex flex-row gap-5">
+            <a href="#">Instagram</a>
+            <a href="#">Tokopedia</a>
+            <a href="#">WhatsApp</a>
         </div>
     </footer>
 </body>
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const Mobilemenu = document.getElementById("Mobilemenu");
-
-    menuBtn.addEventListener('click', () => {
-        const isOpen = !Mobilemenu.classList.contains("hidden");
-        Mobilemenu.classList.toggle("hidden", isOpen);
-        Mobilemenu.classList.toggle("flex", !isOpen);
-        menuBtn.setAttribute("aria-expanded", String(!isOpen));
-        menuBtn.setAttribute("aria-label", isOpen ? "buka menu" : "tutup menu")
-    })
-
-    Mobilemenu.querySelectorAll("a").forEach[(link) => {
-        link.addEventListener('click', () => {
-            Mobilemenu.classList.add("hidden");
-            Mobilemenu.classList.remove("flex");
-            menuBtn.setAttribute("aria-expanded", 'false');
-            menuBtn.setAttribute("aria-label", "Buka menu");
-        });
-    }]
-</script>
 </html>
